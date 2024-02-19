@@ -49,6 +49,55 @@ body {
     width: 200px;
     color: #bbb;
     border-radius: 24px;
+    outline: none;
+}
+
+
+.box input[type="text"]:focus, .box input[type="email"]:focus, textarea:focus {
+    width: 280px;
+    border-color: #f05454;
+    transition: 1s;
+}
+
+
+.box input[type="submit"] {
+    background: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #f04585;
+    padding: 14px 40px;
+    width: 200px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+
+
+
+}
+
+.box input[type="submit"]:hover {
+    background: #f02568;
+}
+
+
+/*form result*/
+
+.form-result{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.success {
+    background-color: #239b28;
+}
+
+.error {
+   background-color: #a01b30; 
 }
 
 
