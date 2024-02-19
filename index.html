@@ -9,13 +9,36 @@
 
 <body>
     
-       <form action="" class="box">
+       <form action="mailer.php" method="post" class="box">
+           
+           
+             <?php
+       
+        if($_GET['success'] == 1){
+            echo "<div class=\"form-result success\">Odeslání proběhlo v pořádku</div>";
+        };
+        
+        if($_GET['success'] == -1){
+            echo "<div class=\"form-result error\">Chyba při odeslání. Zkuste znovu</div>";
+        };
+       ?>
+           
+<!--           musime v souboru prejmenovat index.html na index.php protoze sem pridavame ten kod php-->
+
+           
+           <div class="form-result success">Odeslání proběhlo v pořádku.</div>
+           <div class="form-result error">Chyba, Zkuste to znovu.</div> 
+           
         <h1>Kontakt</h1>
-        <input type="text" placeholder="Jméno a příjmení">
-        <input type="email" placeholder="Email">
-        <textarea name="" cols="30" rows="10"></textarea>
+        <input type="text" name="name" placeholder="Jméno a příjmení">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" cols="30" rows="10"></textarea>
         <input type="submit" value="Odeslat">
     </form>
 
 </body>
 </html>
+
+
+<!--jdou dve metody get se objevi v url adrese a pak je metoda post je tov pozadi(rozhodne lepsi pouzivat)-->
+<!--name vychazi se souboru mailer.php a je to kam se budou posilat ty data-->
